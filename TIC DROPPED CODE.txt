@@ -1,0 +1,55 @@
+	if(e.target.value == "X"){
+		
+		symbol = e.target.value;
+		firstmark = e.target.value;
+		secondmark = "O"
+		symbolO.disabled = true;
+		symbolO.style.color = "black";
+
+	} else if (e.target.value == "O") {
+
+		symbol = e.target.value;
+		symbolX.disabled = true;
+		firstmark = e.target.value;
+		secondmark = "X"
+		symbolO.style.color = "black";
+
+	}
+
+
+
+  for(let i = 0 ; i < board.length ; i++){
+  	for(let k = 0 ; k < board[i].length ; k++){
+  		if(event.target.value == board[i][k]) {	
+  			step++
+  			if(step % 2 === 0) {
+ 		 	 event.target.innerHTML = firstmark;
+  			 board[i][k] = firstmark;
+  			} else {
+  			event.target.innerHTML = secondmark;
+  			board[i][k] = secondmark;	
+  			}
+  		}
+}}
+
+
+  if(firstmark == undefined && secondmark == undefined) {
+
+    symbolX.style.backgroundColor = "#EC5151"
+    symbolO.style.backgroundColor = "#EC5151"
+
+    setTimeout(() => {
+    symbolX.style.backgroundColor = "#FFF"
+    symbolO.style.backgroundColor = "#FFF"
+    },1000)
+
+  	return;
+  }
+
+else if (count==9) {
+
+		count = 0;
+		gameStatusPlace.innerHTML = "Board filled. Game Over !"
+		gameStatusPlace.style.color = "#F03E3E"
+		disableButtons();
+	}

@@ -1,0 +1,82 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+table {
+	width:400px;
+	height:400px;
+}
+
+body {
+	background-color:#212529;
+	font-family: 'Inter', sans-serif;
+}
+
+h1 {
+	color:#dee2e6;
+	font-size:50px;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+p {
+	color:white;
+	margin-bottom:20px;
+}
+
+#gamestatus {
+	text-align:center;
+	margin-left:-100px;
+	font-weight:700;
+}
+
+#gamestatus::after {
+	content:'';
+	height:40px;
+
+}
+
+.container {
+	margin: 0 auto;
+	width:500px;
+	height:800px;
+}
+
+.container p {
+	font-size:24px;
+}
+
+#tablecont {
+	margin-bottom:25px;
+}
+
+
+.firstSymbolContainer  {
+	margin-left:135px;
+	margin-top:50px;
+	color:white;
+
+}
+
+td:nth-of-type(2n),td:nth-of-type(3n) {
+	border-left:3px solid white;
+}
+
+#playAgain {
+	display:block;
+	width:120px;
+	height:50px;
+	font-size:18px;
+	border-radius:20px;
+}
+
+#firstSymbol-X,#firstSymbol-O {
+	width:50px;
+	height:50px;
+	font-size:20px;
+	margin-bottom:20px;
+	border-radius:45px;
+}
+#firstSymbol-O {
+	margin-left:14px;
+}
