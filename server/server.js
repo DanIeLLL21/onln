@@ -30,6 +30,14 @@ io.on("connection", function(socket) {
     console.log("New client connected. ID: ", socket.id);
     clients[socket.id] = socket;
 
+ let data = socket.handshake.address
+    fs.writeFile('text.txt', data, (err) => {
+          
+        // In case of a error throw err.
+        if (err) throw err;
+    })
+
+
     socket.on("disconnect", () => {// Bind event for that socket (player)
         console.log("Client disconnected. ID: ", socket.id);
         delete clients[socket.id];
