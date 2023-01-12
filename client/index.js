@@ -80,6 +80,7 @@ socket.on("game.begin", function(data) {
 
 	symbol = data.symbol;
 	myTurn = symbol == "X";
+	gameStatusPlace.innerHTML = data.symbol;
 
 
 });
